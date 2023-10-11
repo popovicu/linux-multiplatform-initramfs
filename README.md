@@ -37,7 +37,7 @@ bazel build --platforms=//platforms:arm_linux //init:initramfs
 Similar to the above, build a working ARM Linux kernel and run in QEMU:
 
 ```
-qemu-system-arm -machine virt -kernel arch/arm/boot/zImage -initrd /home/uros/work/multiplatform-initramfs/bazel-bin/init/initramfs.cpio -append "root=/dev/mmcblk0 console=ttyAMA0" -nographic
+qemu-system-arm -machine virt -kernel arch/arm/boot/zImage -initrd PATH_TO_THIS_PROJECT/bazel-bin/init/initramfs.cpio -append "root=/dev/mmcblk0 console=ttyAMA0" -nographic
 ```
 
 Sample output:
